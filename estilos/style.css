@@ -30,7 +30,6 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
 
     background-color: white;
@@ -39,6 +38,7 @@ section#login {
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
+    transform: translate(-50%, -50%);
     transition: width .3s, height .3s;
     transition-timing-function: ease;
 }
@@ -63,11 +63,40 @@ div#formulário > h1 {
 
 form > div.campo {
     background-color: #5f2c82;
+    border: 4px solid #5f2c82;
     display: block;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
+}
+
+div.campo > label {
+    display: none;
+}
+
+div.campo > i {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #94cfcd;
+    font-size: 1em;
+    height: 100%;
+    width: calc(100% - 44px);
+    border: 0;
+    border-radius: 8px;
+    margin-top: 1px;
+    margin-left: 44px;
+    transform: translateY(-43px);
+}
+
+div.campo > input:focus-within {
+    background-color: white;
+    border: none;
 }
 
 form > input[type=submit] {
